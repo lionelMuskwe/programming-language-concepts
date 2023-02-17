@@ -1,0 +1,3 @@
+To exit lisp run the following command
+
+(ext:exit)
