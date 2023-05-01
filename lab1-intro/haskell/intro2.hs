@@ -23,6 +23,11 @@ prg2 = do
   line <- getLine
   putStrLn ("you typed: " ++ line)
 
+
+lionel = do
+  line <- getLine
+  putStrLn(line ++ "you are going to be super successful")
+
 main =
   do
   putStrLn name -- like print, but only for strings
@@ -40,3 +45,8 @@ greet1 = "hello " ++ name ++ (toString 123)
 greet2 = (++) "hello " name
 -- concatenating more than 2 strings:
 greet3 = concat ["hello ", name, toString 123]
+
+
+-- creating a MyFunc functon
+
+myFunc x = print( toString (x*10) )
