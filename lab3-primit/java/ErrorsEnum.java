@@ -32,26 +32,26 @@ public class ErrorsEnum
         return result;
     }
   
-    private static Result error2Result(Error e)
+    private static Error error2Result(Result r)
     {
-        Result result = null;
+        Error error = null;
         
-        switch (e) {
-        case FP_ROUNDING:
-            result = Result.A_BIT_DIFFERENT;
+        switch (r) {
+        case A_BIT_DIFFERENT:
+        error = Error.FP_ROUNDING;
             break;
-        case FP_OVERFLOW:
-            result = Result.INFINITY;
+        case INFINITY:
+        error = Error.FP_OVERFLOW;
             break;
-        case FP_UNDERFLOW:
-            result = Result.ZERO;
+        case ZERO:
+        error = Error.FP_UNDERFLOW;
             break;
-        case INT_OVERFLOW:
-            result = Result.VERY_DIFFERENT;
+        case VERY_DIFFERENT:
+        error = Error.INT_OVERFLOW;
             break;
         }
         
-        return result;
+        return error;
     }
 
     public static void main(String[] args)
@@ -63,7 +63,7 @@ public class ErrorsEnum
         }
         System.out.println();
         
-        Error e = getEnumElement("error", Error.class);
-        System.out.println(e + " results in: " + error2Result(e));
+        Result r = getEnumElement("error", Result.class);
+        System.out.println(r + " results in: " + error2Result(r));
     }
 }
