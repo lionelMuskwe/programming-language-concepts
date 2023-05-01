@@ -35,6 +35,15 @@ error2Result FP_Overflow = Infinity
 error2Result FP_Underflow = Zero
 error2Result Int_Overflow = VeryDifferent
 
+lionel = "Hello" :: String
+father lionel = 103
+
+
+result2Error  ABitDifferent = FP_Rounding          
+result2Error  Infinity      = FP_Overflow      
+result2Error  Zero          = FP_Underflow     
+result2Error  VeryDifferent = Int_Overflow         
+
 -- The code below should not be changed and does not need to be fully understood.
 
 {-
